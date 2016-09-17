@@ -1,5 +1,7 @@
 package t2.main;
 
+import java.awt.Font;
+
 import t2.calc.Calculadora;
 
 public class Main {
@@ -12,6 +14,7 @@ public class Main {
 		frame.add(bean); // Adiciona bean ao frame
 		frame.setDefaultCloseOperation(javax.swing.JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true); // Exibe o frame
+		bean.setFonte(new Font("Comic Sans MS", Font.PLAIN, 20));
 	}
 
 }
