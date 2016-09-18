@@ -15,6 +15,9 @@ public class Main {
 		frame.setDefaultCloseOperation(javax.swing.JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true); // Exibe o frame
 		bean.setFonte(new Font("Comic Sans MS", Font.PLAIN, 20));
+
+		calculadora.Calculadora c = new calculadora.Calculadora();
+		frame.add(c);
 	}
 
 }

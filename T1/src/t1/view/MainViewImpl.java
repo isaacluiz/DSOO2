@@ -67,8 +67,9 @@ public class MainViewImpl extends AbstractView<MainControllerImpl> {
 		JMenuItem mntmSobre = new JMenuItem("Sobre");
 		mnOpes.add(mntmSobre);
 
-		JMenuItem mntmAjuda = new JMenuItem("Ajuda");
-		mnOpes.add(mntmAjuda);
+		JMenuItem mntmCalc = new JMenuItem("Calculadora");
+		mntmCalc.addActionListener(event -> this.showCalculadora());
+		mnOpes.add(mntmCalc);
 
 		JMenuItem mntmSair = new JMenuItem("Sair");
 		mntmSair.addActionListener(event -> System.exit(0));
@@ -90,6 +91,10 @@ public class MainViewImpl extends AbstractView<MainControllerImpl> {
 
 		this.frame.setSize(ViewConstants.DEFAULT_WIDTH, ViewConstants.DEFAULT_HEIGHT);
 		this.frame.setLocationRelativeTo(null);
+	}
+
+	private void showCalculadora() {
+
 	}
 
 	@Override
