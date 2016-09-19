@@ -9,7 +9,7 @@ import java.util.List;
 
 public class CSVUtils {
 
-	public static final String FIGURAS = "figuras.csv";
+	public static final String FIGURAS = "src/figuras.csv";
 	public static final String CVS_SPLIT = ",";
 	public static final String COMMENT = "#";
 

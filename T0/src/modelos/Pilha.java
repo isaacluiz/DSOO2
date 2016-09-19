@@ -5,30 +5,30 @@ import java.util.List;
 
 public class Pilha<T> {
 
-	private List<T> pilha = new ArrayList<>();
-	private int prox = 0;
+    private List<T> pilha = new ArrayList<>();
+    private int prox = 0;
 
-	void push(T x) {
-		this.pilha.add(this.prox++, x);
+    public void push(T x) {
+        this.pilha.add(this.prox++, x);
 
-	}
+    }
 
-	T pop() {
-		return this.pilha.remove(--this.prox);
-	}
+    public T pop() {
+        return this.pilha.remove(--this.prox);
+    }
 
-	T top() {
-		return this.pilha.get(this.prox - 1);
+    public T top() {
+        return this.pilha.get(this.prox - 1);
 
-	}
+    }
 
-	boolean empty() {
-		return this.prox == 0;
-	}
+    public boolean empty() {
+        return this.prox == 0;
+    }
 
-	boolean removeElement(T x) {
-		this.prox--;// cf. aula
-		return this.pilha.remove(x);
-	}
+    public boolean removeElement(T x) {
+        this.prox--;// cf. aula
+        return this.pilha.remove(x);
+    }
 
 }//
