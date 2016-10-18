@@ -8,15 +8,15 @@ namespace Biblioteca.model
 {    
     class Livro
     {
-        private String titulo { get; set; }
+        public string titulo { get; set; }
 
-        private String autor { get; set; }
+        public string autor { get; set; }
 
-        private int id { get; set; }
+        public int id { get; set; }
 
-        private DateTime dataEmprestimo { get; set; }
+        public DateTime dataEmprestimo { get; set; }
 
-        private DateTime dataDevolucao { get; set; }
+        public DateTime dataDevolucao { get; set; }
 
     }
 }
