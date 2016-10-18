@@ -57,6 +57,13 @@
     </ApplicationDefinition>
     <Compile Include="controller\BibliotecaController.cs" />
     <Compile Include="model\Livro.cs" />
+    <Compile Include="model\Usuario.cs" />
+    <Compile Include="view\DevolverLivroView.xaml.cs">
+      <DependentUpon>DevolverLivroView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="view\HistoricoView.xaml.cs">
+      <DependentUpon>HistoricoView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="view\PegarLivroView.xaml.cs">
       <DependentUpon>PegarLivroView.xaml</DependentUpon>
     </Compile>
@@ -72,6 +79,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="view\DevolverLivroView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="view\HistoricoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="view\PegarLivroView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
