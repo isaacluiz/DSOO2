@@ -23,5 +23,10 @@ namespace Biblioteca.view
         {
             InitializeComponent();
         }
+
+        private void button_cancelar_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

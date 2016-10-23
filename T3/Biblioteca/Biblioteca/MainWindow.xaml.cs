@@ -31,5 +31,11 @@ namespace Biblioteca
             PegarLivroView pegarLivro = new PegarLivroView();
             pegarLivro.Show();
         }
+
+        private void button_devolver_Click(object sender, RoutedEventArgs e)
+        {
+            DevolverLivroView devolverLivro = new DevolverLivroView();
+            devolverLivro.Show();
+        }
     }
 }

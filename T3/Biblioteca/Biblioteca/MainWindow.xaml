@@ -12,7 +12,7 @@
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
         <Button x:Name="button_emprestar" Content="Pegar livro" HorizontalAlignment="Left" Height="63" Margin="53,42,0,0" VerticalAlignment="Top" Width="168" Click="button_emprestar_Click"/>
-        <Button x:Name="button_devolver" Content="Devolver livro" HorizontalAlignment="Left" Height="63" Margin="53,120,0,0" VerticalAlignment="Top" Width="168"/>
+        <Button x:Name="button_devolver" Content="Devolver livro" HorizontalAlignment="Left" Height="63" Margin="53,120,0,0" VerticalAlignment="Top" Width="168" Click="button_devolver_Click"/>
         <Button x:Name="button_historico" Content="Histórico" HorizontalAlignment="Left" Height="63" Margin="53,199,0,0" VerticalAlignment="Top" Width="168"/>
     </Grid>
 </Window>

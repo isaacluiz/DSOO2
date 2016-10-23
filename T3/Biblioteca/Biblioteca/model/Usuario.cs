@@ -8,8 +8,10 @@ namespace Biblioteca.model
 {
     class Usuario
     {
-        private String matricula { get; set; }
+        public string matricula { get; set; }
 
-        private String nome { get; set; }
+        public string nome { get; set; }
+
+        public List<Livro> livrosEmprestados { get; set; }
     }
 }
