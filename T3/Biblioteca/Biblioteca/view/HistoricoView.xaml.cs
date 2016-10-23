@@ -34,9 +34,23 @@ namespace Biblioteca.view
             string matricula = textBox_matricula.Text;
             if (controller.VerificaMatricula(matricula))
             {
-                foreach (Livro l in controller.TodosLivrosDoUsuario(matricula)){
-                    listView.Items.Add(l);
+                List<Livro> livros = controller.TodosLivrosDoUsuario(matricula);
+                if (!livros.Equals(null) && livros.Any())
+                {
+                    foreach (Livro l in controller.TodosLivrosDoUsuario(matricula))
+                    {
+                        listView.Items.Add(l);
+                    }
+
                 }
+                else
+                {
+                    MessageBox.Show("Usuário não possui histórico de empréstimo!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Usuário não encontrado!");
             }
         }
     }
