@@ -30,10 +30,11 @@ namespace Biblioteca.view
 
         private void button_procurar_Click(object sender, RoutedEventArgs e)
         {
+            listView.Items.Clear();
             string matricula = textBox_matricula.Text;
             if (controller.VerificaMatricula(matricula))
             {
-                foreach (Livro l in controller.LivrosDoUsuario(matricula)){
+                foreach (Livro l in controller.TodosLivrosDoUsuario(matricula)){
                     listView.Items.Add(l);
                 }
             }

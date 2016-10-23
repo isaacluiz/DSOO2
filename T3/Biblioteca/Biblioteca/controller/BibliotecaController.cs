@@ -49,7 +49,7 @@ namespace Biblioteca.controller
             {
                 if (u.matricula.Equals(matricula))
                 {
-                    bool b = u.livrosEmprestados.Remove(livro);
+                    bool b = u.livrosEmprestados.Contains(livro);
                     if (b)
                     {
                         biblioteca.livros.Add(livro);
@@ -63,6 +63,18 @@ namespace Biblioteca.controller
         }
 
         public List<Livro> LivrosDoUsuario(string matricula)
+        {
+            foreach (Usuario u in biblioteca.usuariosDaBiblioteca)
+            {
+                if (u.matricula.Equals(matricula))
+                {
+                    return u.livrosEmprestados.FindAll(l => (l.dataDevolucao.Equals(null))); // se nao tem data de devolução é pq nao foi devolvido
+                }
+            }
+            return new List<Livro>();
+        }
+
+        public List<Livro> TodosLivrosDoUsuario(string matricula)
         {
             foreach (Usuario u in biblioteca.usuariosDaBiblioteca)
             {

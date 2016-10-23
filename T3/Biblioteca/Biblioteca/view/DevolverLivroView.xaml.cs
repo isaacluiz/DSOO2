@@ -39,6 +39,7 @@ namespace Biblioteca.view
             string matricula = this.textBox_matricula.Text;
             controller.DevolverLivro(livro, matricula);
             this.updateComboBox();
+            MessageBox.Show("Livro devolvido com sucesso!");
         }
 
         private void textBox_matricula_LostFocus(object sender, RoutedEventArgs e)

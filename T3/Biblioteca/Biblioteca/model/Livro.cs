@@ -14,9 +14,9 @@ namespace Biblioteca.model
 
         public int id { get; set; }
 
-        public DateTime dataEmprestimo { get; set; }
+        public DateTime? dataEmprestimo { get; set; }
 
-        public DateTime dataDevolucao { get; set; }
+        public DateTime? dataDevolucao { get; set; }
 
     }
 }
