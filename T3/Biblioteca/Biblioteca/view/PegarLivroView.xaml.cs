@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Biblioteca.model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,7 +21,7 @@ namespace Biblioteca.view
     public partial class PegarLivroView : Window
     {
         public PegarLivroView()
-        {
+        {          
             InitializeComponent();
         }
 
@@ -32,6 +33,11 @@ namespace Biblioteca.view
         private void button_cancelar_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        public void populateCombo(List<Livro> livros)
+        {
+           
         }
     }
 }

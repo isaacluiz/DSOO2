@@ -1,4 +1,5 @@
-﻿using Biblioteca.view;
+﻿using Biblioteca.controller;
+using Biblioteca.view;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,14 +22,18 @@ namespace Biblioteca
     /// </summary>
     public partial class MainWindow : Window
     {
+        private BibliotecaController controller;
+
         public MainWindow()
         {
             InitializeComponent();
+            controller = new BibliotecaController();
         }
 
         private void button_emprestar_Click(object sender, RoutedEventArgs e)
         {   
             PegarLivroView pegarLivro = new PegarLivroView();
+            pegarLivro.populateCombo(controller.biblioteca.livros);
             pegarLivro.Show();
         }
 

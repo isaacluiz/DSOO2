@@ -9,10 +9,12 @@ namespace Biblioteca.controller
 {
     class BibliotecaController
     {
-        BibliotecaModel biblioteca;
-        BibliotecaController ()
+        public BibliotecaModel biblioteca { get; set; }
+
+        public BibliotecaController ()
         {
             biblioteca = new BibliotecaModel();
+            
         }
     }
 }

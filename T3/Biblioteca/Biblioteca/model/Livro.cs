@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Biblioteca.model
 {    
-    class Livro
+    public class Livro
     {
         public string titulo { get; set; }
 
