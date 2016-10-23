@@ -1,4 +1,5 @@
-﻿using Biblioteca.model;
+﻿using Biblioteca.controller;
+using Biblioteca.model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,24 +21,41 @@ namespace Biblioteca.view
     /// </summary>
     public partial class PegarLivroView : Window
     {
+
+        public BibliotecaController controller { get; set; }
+
         public PegarLivroView()
-        {          
-            InitializeComponent();
-        }
-
-        private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            InitializeComponent();
         }
 
         private void button_cancelar_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }     
+
+        private void button_pegar_Click(object sender, RoutedEventArgs e)
+        {
+            Livro livro = (Livro)comboBox.SelectedItem;
+            string matricula = this.textBox_matricula.Text;
+            if (!controller.VerificaMatricula(matricula))
+            {
+                MessageBox.Show("Não existe essa matrícula!");
+            }
+            else
+            {
+                controller.PegaLivro(livro, matricula);
+                this.updateComboBox();
+                MessageBox.Show("Livro obtido com sucesso!");
+            }
         }
 
-        public void populateCombo(List<Livro> livros)
+        public void updateComboBox()
         {
-           
+            comboBox.ItemsSource = null; // para limpar o combo!!
+            comboBox.ItemsSource = controller.biblioteca.livros;
+            comboBox.DisplayMemberPath = "titulo";
+            comboBox.SelectedValuePath = "id";
         }
     }
 }

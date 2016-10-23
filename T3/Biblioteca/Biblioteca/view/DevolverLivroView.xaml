@@ -8,11 +8,11 @@
         Title="DevolverLivroView" Height="300" Width="300">
     <Grid>
         <Label x:Name="label_matricula" Content="Matricula" HorizontalAlignment="Left" Margin="24,20,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBox_matricula" HorizontalAlignment="Left" Height="23" Margin="24,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="239"/>
+        <TextBox x:Name="textBox_matricula" HorizontalAlignment="Left" Height="23" Margin="24,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="239" LostFocus="textBox_matricula_LostFocus"/>
         <Label x:Name="label_livros" Content="Escolha o livro para devolver" HorizontalAlignment="Left" Margin="24,108,0,0" VerticalAlignment="Top"/>
         <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="24,139,0,0" VerticalAlignment="Top" Width="239"/>
-        <Button x:Name="button_cancelar" Content="Cancelar" HorizontalAlignment="Left" Height="47" Margin="24,197,0,0" VerticalAlignment="Top" Width="94" Click="button_cancelar_Click"/>
-        <Button x:Name="button_devolver" Content="Devolver" HorizontalAlignment="Left" Height="47" Margin="169,197,0,0" VerticalAlignment="Top" Width="94"/>
+        <Button x:Name="button_cancelar" Content="Fechar" HorizontalAlignment="Left" Height="47" Margin="24,197,0,0" VerticalAlignment="Top" Width="94" Click="button_cancelar_Click"/>
+        <Button x:Name="button_devolver" Content="Devolver" HorizontalAlignment="Left" Height="47" Margin="169,197,0,0" VerticalAlignment="Top" Width="94" Click="button_devolver_Click"/>
 
     </Grid>
 </Window>

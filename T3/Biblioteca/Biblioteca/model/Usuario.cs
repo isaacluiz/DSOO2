@@ -6,12 +6,18 @@ using System.Threading.Tasks;
 
 namespace Biblioteca.model
 {
-    class Usuario
+    public class Usuario
     {
         public string matricula { get; set; }
 
         public string nome { get; set; }
 
         public List<Livro> livrosEmprestados { get; set; }
+
+        public Usuario()
+        {
+            livrosEmprestados = new List<Livro>();
+        }
+
     }
 }

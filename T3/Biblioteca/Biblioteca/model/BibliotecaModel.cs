@@ -6,28 +6,16 @@ using System.Threading.Tasks;
 
 namespace Biblioteca.model
 {
-    class BibliotecaModel
+    public class BibliotecaModel
     {
         public List<Livro> livros { get; set; }
 
         public List<Usuario> usuariosDaBiblioteca { get; set; }
 
-        public BibliotecaModel()
+        public void ordenaLivros()
         {
-            livros = new List<Livro>();
-            usuariosDaBiblioteca = new List<Usuario>();
-           this.populateLivros();
-        }
-
-        private void populateLivros()
-        {
-            for (int i = 1; i <= 20; i++)
-            {
-                Livro livro = new Livro();
-                livro.id = i;
-                livro.autor = "Autor Teste";
-                livro.titulo = "Titulo Teste" + i;     
-            }
-        }
+            List<Livro> SortedList = livros.OrderBy(l => l.id).ToList();
+            livros = SortedList;
+        }   
     }
 }

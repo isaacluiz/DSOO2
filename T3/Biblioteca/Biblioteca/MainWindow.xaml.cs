@@ -33,14 +33,23 @@ namespace Biblioteca
         private void button_emprestar_Click(object sender, RoutedEventArgs e)
         {   
             PegarLivroView pegarLivro = new PegarLivroView();
-            pegarLivro.populateCombo(controller.biblioteca.livros);
+            pegarLivro.controller = controller;
+            pegarLivro.updateComboBox();
             pegarLivro.Show();
         }
 
         private void button_devolver_Click(object sender, RoutedEventArgs e)
         {
             DevolverLivroView devolverLivro = new DevolverLivroView();
+            devolverLivro.controller = controller;
             devolverLivro.Show();
+        }
+
+        private void button_historico_Click(object sender, RoutedEventArgs e)
+        {
+            HistoricoView historico = new HistoricoView();
+            historico.controller = controller;
+            historico.Show();
         }
     }
 }

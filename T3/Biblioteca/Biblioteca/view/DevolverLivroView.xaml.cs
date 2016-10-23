@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Biblioteca.controller;
+using Biblioteca.model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +21,8 @@ namespace Biblioteca.view
     /// </summary>
     public partial class DevolverLivroView : Window
     {
+        public BibliotecaController controller { get; set; }
+
         public DevolverLivroView()
         {
             InitializeComponent();
@@ -28,5 +32,30 @@ namespace Biblioteca.view
         {
             this.Close();
         }
+
+        private void button_devolver_Click(object sender, RoutedEventArgs e)
+        {
+            Livro livro = (Livro)comboBox.SelectedItem;
+            string matricula = this.textBox_matricula.Text;
+            controller.DevolverLivro(livro, matricula);
+            this.updateComboBox();
+        }
+
+        private void textBox_matricula_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (controller.VerificaMatricula(textBox_matricula.Text))
+            {
+                this.updateComboBox();
+            }
+        }
+
+        private void updateComboBox()
+        {
+            comboBox.ItemsSource = null; // para limpar o combo!!
+            comboBox.ItemsSource = controller.LivrosDoUsuario(textBox_matricula.Text);
+            comboBox.DisplayMemberPath = "titulo";
+            comboBox.SelectedValuePath = "id";
+        }
+
     }
 }
