@@ -9,11 +9,10 @@ namespace Biblioteca.controller
 {
     class BibliotecaController
     {
-
-        Livro l = new Livro();
+        BibliotecaModel biblioteca;
         BibliotecaController ()
         {
-            
+            biblioteca = new BibliotecaModel();
         }
     }
 }

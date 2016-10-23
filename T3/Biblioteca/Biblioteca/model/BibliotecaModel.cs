@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace Biblioteca.model
 {
-    class Biblioteca
+    class BibliotecaModel
     {
         public List<Livro> livros { get; set; }
 
         public List<Usuario> usuariosDaBiblioteca { get; set; }
 
-        Biblioteca()
+        public BibliotecaModel()
         {
-            livros = new List<Livro>;
-            usuariosDaBiblioteca = new List<Usuario>;
-            populateLivros();
+            livros = new List<Livro>();
+            usuariosDaBiblioteca = new List<Usuario>();
+           this.populateLivros();
         }
 
         private void populateLivros()
